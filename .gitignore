@@ -1,0 +1,8 @@
+__pycache__
+.DS_Store
+.env
+Pipfile.lock
+venv/
+*.swp
+.ipynb_checkpoints
+

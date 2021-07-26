@@ -1,9 +1,12 @@
 import re
 from hanziconv import HanziConv
-from Pinyin2Hanzi import DefaultDagParams, dag
 from pypinyin import pinyin, Style
+from HomophoneSearch.Pinyin2Hanzi import DefaultDagParams, dag
+from HomophoneSearch.service import Transfer
+
 
 dagparams = DefaultDagParams()
+user_defined_dict = {}
 
 class ChineseTransfer(Transfer):
     
@@ -39,4 +42,7 @@ class ChineseTransfer(Transfer):
             style=Style.TONE3,
             heteronym=True
             )
-        return [tone[0] for tone in tone_list]        
+        return [tone[0] for tone in tone_list]
+
+if __name__ == "__main__":
+    print(chineseTransfer.text_to_text('測試'))
