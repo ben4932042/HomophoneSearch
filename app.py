@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import jsonify
 from flask import request
+from flask import abort
 from HomophoneSearch.Chinese.transfer import ChineseTransfer
 from HomophoneSearch.English.transfer import EnglishTransfer
 
@@ -16,7 +17,7 @@ def homephone():
     elif language == 'english':
         return_list = EnglishTransfer.text_to_text(str(word))
     else:
-        raise
+        abort(404)
     return jsonify({'language': language, 'text': return_list})
 
 if __name__ == "__main__":
