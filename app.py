@@ -2,8 +2,8 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 from flask import abort
-from HomophoneSearch.Chinese.transfer import ChineseTransfer
-from HomophoneSearch.English.transfer import EnglishTransfer
+from HomophoneSearch.chinese.transfer import ChineseTransfer
+from HomophoneSearch.english.transfer import EnglishTransfer
 
 app = Flask(__name__)
 
