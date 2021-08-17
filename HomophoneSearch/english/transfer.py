@@ -1,6 +1,8 @@
 import re
 import collections
+from dotenv import load_dotenv, find_dotenv
 from HomophoneSearch.service import Transfer
+load_dotenv(find_dotenv())
 
 class EnglishTransfer(Transfer):
     
@@ -26,7 +28,7 @@ class EnglishTransfer(Transfer):
                 raise
         except:
             NWORDS = cls.train(
-                cls.english_words(open('/Users/liuyuzhe/Downloads/big.txt').read())
+                cls.english_words(open(os.getenv("ENGLISH_TRAINING_TEXT")).read())
                 )
 
     @staticmethod

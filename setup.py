@@ -8,8 +8,8 @@ setup(
 
     packages = [
         'HomophoneSearch',
-        'HomophoneSearch/Chinese',
-        'HomophoneSearch/English',
+        'HomophoneSearch/chinese',
+        'HomophoneSearch/english',
         'HomophoneSearch/Pinyin2Hanzi',
         ],
     include_package_data = True,
